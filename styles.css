@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: rgb(233, 233, 233);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.header img {
+  width: 65%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  justify-content: space-between;
+}
+
+.nav-toggle,
+.nav-close {
+  background-color: transparent;
+  border: none;
+  font-size: 1.35rem;
+  color: rgb(62, 175, 255);
+  cursor: pointer;
+  transition: all .3s linear;
+}
+
+.nav-close {
+  color: rgb(255, 30, 30);
+}
+
+.nav-close:hover {
+  transform: rotate(360deg);
+}
+
+.nav-toggle {
+  margin: 1rem 2rem;
+  animation: nav-toggle-anmat 1s ease-in infinite alternate;
+}
+
+.nav-toggle:hover {
+  color: rgb(29, 29, 29);
+  animation-play-state: paused;
+}
+
+@keyframes nav-toggle-anmat {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.nav-center {
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(-100%);
+  transition: all .3s linear;
+}
+
+.show-nav {
+  transform: translateX(0);
+}
+
+.social-links {
+  display: flex;
+  gap: .55rem;
+  font-size: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  width: 100%;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-links a {
+  width: 100%;
+  text-decoration: none;
+  display: block;
+  color: rgb(29, 29, 29);
+  padding: .5rem 1rem;
+  transition: all .3s linear;
+}
+
+.nav-links a:hover {
+  background-color: rgb(73,166,233);
+  color: rgb(29, 74, 106);
+  padding-left: calc(1rem + .2rem);
+}
+
+.social-links a {
+  color: rgb(73,166,233);
+  transition: all .3s linear;
+}
+
+.social-links a:hover {
+  color: rgb(29, 29, 29);
+}
+
+
+
+
